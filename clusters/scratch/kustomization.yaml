@@ -1,9 +1,24 @@
-apiVersion: kustomize.config.k8s.io/v1beta1
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: component-bom
+  namespace: flux-system
+spec:
+  interval: 1m0s
+  ref:
+    branch: main
+  secretRef:
+    name: github-ssh-auth
+  url: git@github.com:glaxman/component-bom.git
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
   name: scratch-gitops
   namespace: flux-system
+spec:
+  dependsOn:
+    - name: component-bom
 resources:
-  - sources
   - ../components/required/cluster-autoscaler
 
