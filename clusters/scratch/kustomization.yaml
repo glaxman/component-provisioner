@@ -1,24 +1,24 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta2
-kind: GitRepository
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1
+kind: Kustomization
 metadata:
   name: component-bom
   namespace: flux-system
 spec:
-  interval: 1m0s
-  ref:
-    branch: main
-  secretRef:
-    name: github-ssh-auth
-  url: git@github.com:glaxman/component-bom.git
+  interval: 1h
+  retryInterval: 1m
+  timeout: 5m
+  sourceRef:
+    kind: GitRepository
+    name: component-bom
+resource:
+  - source
 ---
-apiVersion: source.toolkit.fluxcd.io/v1beta2
+apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 metadata:
   name: scratch-gitops
   namespace: flux-system
-spec:
-  dependsOn:
-    - name: component-bom
 resources:
   - ../components/required/cluster-autoscaler
 
