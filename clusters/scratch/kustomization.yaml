@@ -4,6 +4,5 @@ metadata:
   name: scratch-gitops
   namespace: flux-system
 resources:
-  - ../components/required/
-  - patches/cluster-autoscaler
+  - ../components/required/cluster-autoscaler
 

@@ -10,3 +10,22 @@ spec:
   secretRef:
     name: github-ssh-auth
   url: git@github.com:glaxman/component-bom.git
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
+kind: GitRepository
+metadata:
+  name: component-bom
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: component-bom
+  interval: 1m0s
+  ref:
+    branch: main
+  secretRef:
+    name: github-ssh-auth
+  url: git@github.com:glaxman/component-provisioner.git
+  include:
+    - repository:
+        name: component-bom
+      toPath: components
