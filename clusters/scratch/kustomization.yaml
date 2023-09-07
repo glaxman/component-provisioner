@@ -6,8 +6,6 @@ metadata:
   namespace: flux-system
 resources:
   - component-bom.yaml
-bases:
-  - .
 ---
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
