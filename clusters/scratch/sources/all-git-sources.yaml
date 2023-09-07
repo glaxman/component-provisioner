@@ -11,3 +11,7 @@ spec:
   secretRef:
     name: flux-system
   url: https://github.com/glaxman/component-bom
+  include:
+    - repository:
+        name: cluster-autoscaler
+      toPath: component/required/cluster-autoscaler

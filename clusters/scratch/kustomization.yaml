@@ -3,6 +3,8 @@ kind: Kustomization
 metadata:
   name: component-provisioner
   namespace: flux-system
+bases:
+  - ../components/required/
 resources:
-  - ../components/required/cluster-autoscaler
+  - sources/all-git-sources.yaml
 
