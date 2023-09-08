@@ -23,4 +23,8 @@ spec:
   secretRef:
     name: flux-system
   url: ssh://git@github.com/glaxman/component-provisioner
+  include:
+    - repository:
+        name: cluster-autoscaler
+      toPath: components/required/cluster-autoscaler
 
