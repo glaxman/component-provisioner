@@ -4,6 +4,8 @@ metadata:
   name: component-release
   namespace: flux-system
 spec:
+  dependsOn:
+    - name: components-sources
   interval: 2m0s
   wait: true
   timeout: 2m0s
