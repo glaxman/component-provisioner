@@ -10,3 +10,18 @@ spec:
   sourceRef:
     kind: GitRepository
     name: component-bom
+---
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: component-release
+  namespace: flux-system
+spec:
+  dependsOn:
+    - name: component-bom
+  interval: 5m0s
+  path: ./components/required
+  prune: true
+  sourceRef:
+    kind: GitRepository
+    name: component-provisioner
