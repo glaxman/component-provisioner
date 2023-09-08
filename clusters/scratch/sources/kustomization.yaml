@@ -6,6 +6,4 @@ metadata:
 resources:
   - component-bom.yaml
   - component-provisioner.yaml
-bases:
-  - ../components/required
 
