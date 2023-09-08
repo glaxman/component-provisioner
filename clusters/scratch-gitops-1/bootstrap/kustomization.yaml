@@ -5,3 +5,4 @@ resources:
   - source-git-repo-provisioner.yaml
   - scratch-gitops-1-kustomization.yaml
   - scratch-gitops-1-kustomization-sources.yaml
+
