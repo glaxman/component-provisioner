@@ -14,4 +14,4 @@ spec:
   include:
     - repository:
         name: cluster-autoscaler
-      toPath: component/required/cluster-autoscaler
+      toPath: components/required/cluster-autoscaler

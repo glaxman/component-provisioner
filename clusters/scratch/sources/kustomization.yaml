@@ -1,11 +1,11 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 metadata:
-  name: component-bom
+  name: component-bom-release
   namespace: flux-system
 resources:
   - component-bom.yaml
   - component-provisioner.yaml
-  - component/required/cluster-autoscaler
-
+bases:
+  - ../components/required
 
