@@ -6,5 +6,6 @@ metadata:
 resources:
   - component-bom.yaml
   - component-provisioner.yaml
+  - component/required/cluster-autoscaler
 
 
