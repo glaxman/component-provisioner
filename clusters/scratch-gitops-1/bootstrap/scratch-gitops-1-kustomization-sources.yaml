@@ -11,6 +11,6 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: scratch-gitops-1-source
+    name: scratch-gitops-1-sources
     namespace: flux-system
   path: "./clusters/scratch-gitops-1/sources"
