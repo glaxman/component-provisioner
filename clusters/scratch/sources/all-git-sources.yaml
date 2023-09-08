@@ -11,4 +11,3 @@ spec:
   secretRef:
     name: flux-system
   url: ssh://git@github.com/glaxman/component-bom
-  in
