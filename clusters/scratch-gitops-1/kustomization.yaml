@@ -3,5 +3,5 @@ kind: Kustomization
 metadata:
   name: scratch-gitops-1
   namespace: flux-system
-bases:
-  - ../components/required
+resources:
+  - kustomizations
