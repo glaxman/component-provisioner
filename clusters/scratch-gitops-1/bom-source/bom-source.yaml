@@ -5,6 +5,7 @@ metadata:
   name: component-bom
   namespace: flux-system
 spec:
+  recurseSubmodules: true
   interval: 1m0s
   ref:
     tag: v0.0.7
