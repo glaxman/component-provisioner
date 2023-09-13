@@ -4,5 +4,4 @@ metadata:
   name: component-bom-release
   namespace: flux-system
 resources:
-  - source-git-repo-component-bom.yaml
-  - component-bom.yaml
+  - bom-source.yaml

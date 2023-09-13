@@ -1,7 +1,7 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: components-sources
+  name: bom-kustomization
   namespace: flux-system
 spec:
   interval: 2m0s
@@ -11,6 +11,6 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: scratch-gitops-1-sources
+    name: scratch-gitops-1-config
     namespace: flux-system
-  path: "./clusters/scratch-gitops-1/sources"
+  path: "./clusters/scratch-gitops-1/bom-source/"

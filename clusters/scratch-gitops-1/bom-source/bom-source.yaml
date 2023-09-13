@@ -2,12 +2,12 @@
 apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
-  name: component-bom-tag
+  name: component-bom
   namespace: flux-system
 spec:
   interval: 1m0s
   ref:
-    tag: v0.0.6
+    tag: v0.0.7
   secretRef:
     name: flux-system
   url: ssh://git@github.com/glaxman/component-bom
