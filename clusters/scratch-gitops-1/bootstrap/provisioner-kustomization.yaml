@@ -13,6 +13,6 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: scratch-gitops-1-config
+    name: provisioner-source
     namespace: flux-system
-  path: "./clusters/scratch-gitops-1/bootstrap/"
+  path: "./clusters/scratch-gitops-1/"

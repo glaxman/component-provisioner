@@ -11,6 +11,6 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: scratch-gitops-1-config
+    name: provisioner
     namespace: flux-system
-  path: "./clusters/scratch-gitops-1/bom-source/"
+  path: "./clusters/scratch-gitops-1/bom-source"
