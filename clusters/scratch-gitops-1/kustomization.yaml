@@ -4,4 +4,4 @@ metadata:
   name: scratch-gitops-1
   namespace: flux-system
 resources:
-  - atmos/bundle
+  - ../atmos/bundle
