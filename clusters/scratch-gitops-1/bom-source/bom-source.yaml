@@ -8,7 +8,7 @@ spec:
   recurseSubmodules: true
   interval: 1m0s
   ref:
-    tag: v0.0.11
+    tag: v0.0.12
   secretRef:
     name: flux-system
   url: ssh://git@github.com/glaxman/component-bom
