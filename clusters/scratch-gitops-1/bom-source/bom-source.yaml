@@ -9,7 +9,7 @@ spec:
   gitImplementation: go-git
   interval: 1m0s
   ref:
-    tag: v0.0.8
+    tag: v0.0.9
   secretRef:
     name: flux-system
   url: ssh://git@github.com/glaxman/component-bom
